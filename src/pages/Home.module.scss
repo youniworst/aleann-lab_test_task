@@ -1,5 +1,7 @@
+@import '../styles/colors.scss';
+
 .main {
-    background-color: #E6E9F2;
+    background-color: $background;
     width: 100%;
     height: 100vh;
     padding-top: 29px;
