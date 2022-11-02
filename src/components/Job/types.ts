@@ -5,4 +5,5 @@ export type JobProps = {
   createdAt: string;
   pictureSrc: string;
   rate?: number;
+  className?: string;
 };

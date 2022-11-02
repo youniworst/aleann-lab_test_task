@@ -12,14 +12,15 @@ export const Job: FC<JobProps> = ({
   createdAt,
   pictureSrc,
   rate = 5,
+  className,
 }) => {
   const starIconSrc = "/icons/star.svg";
   const locationIconSrc = "/icons/location.svg";
   const favoriteIconSrc = "/icons/favorite.svg";
 
-
+  const containerStyle = `${styles.container} ${className}`;
   return (
-    <div className={styles.container}>
+    <div className={containerStyle}>
       <div className={styles.img}>
         <Image src={pictureSrc} alt={""} width={85} height={85} />
       </div>
