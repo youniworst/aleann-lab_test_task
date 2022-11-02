@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, FC } from "react";
+import { createContext, useState, FC } from "react";
 import { LoadingContextProps, LoadingProviderProps } from "./types";
 
 export const LoadingContext = createContext<LoadingContextProps>({

@@ -8,22 +8,11 @@ import { useLoading } from "../hooks";
 import styles from "./Home.module.scss";
 
 const Home: NextPage = () => {
-  const [list, setList] = useState([]);
-  const { setLoading, loading } = useLoading();
-  useEffect(() => {
-    setLoading && setLoading(true);
-    $api
-      .get("")
-      .then((res) => {
-        setList(res.data);
-      })
-      .finally(() => setLoading && setLoading(false));
-  }, []);
-
+  const { loading } = useLoading();
   return (
     <main className={styles.main}>
       {loading && <Loader />}
-      <JobList jobsArray={list} />
+      <JobList />
     </main>
   );
 };

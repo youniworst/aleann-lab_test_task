@@ -1,3 +1,66 @@
 .job {
-    margin-bottom: 8px;
+    margin: 0 auto 8px;
+
+    &:nth-last-child(2) {
+        margin: 0 auto 50px;
+    }
+}
+
+
+.paginate {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    max-width: 515px;
+    margin: 0 auto;
+    background: #FFFFFF;
+    box-shadow: 2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 10.4px;
+    padding: 14px 20px 0 20px;
+}
+
+.break {
+    font-weight: 700;
+    font-size: 20.8px;
+    line-height: 25px;
+    letter-spacing: 1.73333px;
+    color: #70778B;
+    cursor: pointer;
+}
+
+.paginate_number {
+    font-weight: 700;
+    font-size: 20.8px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 1.73333px;
+    color: #70778B;
+    padding-bottom: 14px;
+    width: 30px;
+    justify-content: center;
+
+    a {
+        cursor: pointer;
+    }
+}
+
+.active_number {
+    color: #5876C5;
+    border-bottom: 3px solid #5876C5;
+}
+
+.prev,
+.next {
+    display: block;
+    padding-top: 4px;
+    cursor: pointer;
+}
+
+.prev {
+    margin-right: 60px;
+}
+
+.next {
+    margin-left: 60px;
 }
