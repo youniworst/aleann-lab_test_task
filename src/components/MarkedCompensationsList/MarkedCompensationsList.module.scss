@@ -1,0 +1,17 @@
+@import '../../styles/colors.scss';
+
+.li {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.5625px;
+    color: $dark;
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    top: 1px;
+    left: -19px;
+}

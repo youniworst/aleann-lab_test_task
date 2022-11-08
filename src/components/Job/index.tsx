@@ -1,11 +1,13 @@
-import { FC, ReactElement } from "react";
+import { FC, MouseEvent } from "react";
 import { JobProps } from "./types";
 import styles from "./Job.module.scss";
 import Image from "next/image";
 import { nanoid } from "nanoid";
 import { dateCount } from "../../utils/date_count";
+import { useRouter } from "next/router";
 
 export const Job: FC<JobProps> = ({
+  id,
   title,
   address,
   location = "Vienna, Austria",
@@ -19,6 +21,12 @@ export const Job: FC<JobProps> = ({
   const favoriteIconSrc = "/icons/favorite.svg";
 
   const containerStyle = `${styles.container} ${className}`;
+
+  const router = useRouter();
+  const titleClickHandler = (event: MouseEvent<HTMLSpanElement>) => {
+    router.push(`/job/${id}`);
+  };
+
   return (
     <div className={containerStyle}>
       <div className={styles.img}>
@@ -26,7 +34,9 @@ export const Job: FC<JobProps> = ({
       </div>
 
       <div className={styles.text_block}>
-        <h2 className={styles.title}>{title}</h2>
+        <h2  className={styles.title}>
+          <span className={styles.title_text} onClick={titleClickHandler}>{title}</span>
+        </h2>
         <p className={styles.address}>{address}</p>
         <div className={styles.location}>
           <div className={styles.location_img}>

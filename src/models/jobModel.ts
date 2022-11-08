@@ -11,4 +11,5 @@ export interface IJob {
   pictures: string[];
   salary: string;
   title: string;
+  location: number[];
 }

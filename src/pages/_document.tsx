@@ -8,6 +8,7 @@ const Document: FC = () => (
         href="http://fonts.cdnfonts.com/css/proxima-nova-2"
         rel="stylesheet"
       />
+      <link href="https://fonts.cdnfonts.com/css/roboto" rel="stylesheet" />
     </Head>
     <body>
       <Main />

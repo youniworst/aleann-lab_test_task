@@ -39,6 +39,13 @@
     width: 100%;
 }
 
+.title_text  {
+    cursor: pointer;
+    &:hover {
+        color: black;
+    }
+}
+
 .address {
     font-weight: 400;
     font-size: 16px;

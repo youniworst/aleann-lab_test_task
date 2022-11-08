@@ -51,6 +51,7 @@ export const JobList: FC<JobListProps> = ({ className }) => {
       {currentItems.map((item: IJob) => (
         <Job
           key={item.id}
+          id={item.id}
           className={styles.job}
           pictureSrc={item.pictures[0]}
           title={item.title}

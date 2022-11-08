@@ -1,0 +1,22 @@
+@import '../../styles/colors.scss';
+
+.button {
+    background: rgba($color: #384564, $alpha: 0.14);
+    border: none;
+    padding: 16px 26px 14px 52px;
+    position: relative;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $dark;
+    cursor: pointer;
+}
+
+.img {
+    top: 55%;
+    left: 23px;
+    transform: translateY(-50%);
+    position: absolute;
+}

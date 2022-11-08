@@ -6,12 +6,13 @@
     background-color: $background;
     position: fixed;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     z-index: 10;
 }
 
 .loader {
+    margin-bottom: 100px;
     border-radius: 50%;
     height: 70px;
     width: 70px;
