@@ -20,10 +20,10 @@ export const MarkedCompensationsList: FC<MarkedCompensationsListProps> = ({
     <ul className={listStyle}>
       {array.map((item) => (
         <li key={item} className={styles.li}>
-          {item}
           <div className={styles.img}>
-            <Image src={bulletIconSrc} alt="" width={9} height={9} />
+            <Image src={bulletIconSrc} alt="" fill />
           </div>
+          {item}
         </li>
       ))}
     </ul>

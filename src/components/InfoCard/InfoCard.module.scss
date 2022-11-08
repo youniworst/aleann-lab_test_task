@@ -20,3 +20,9 @@
     border: 1px solid #FFCF00;
     color: #988B49;
 }
+
+@media all and (max-width:450px) {
+    .card{
+        width: 120px;
+    }
+}

@@ -11,6 +11,8 @@
     justify-content: space-between;
     align-items: center;
     color: #E7EAF0;
+    border-radius: 8px;
+    overflow: hidden;
 
     h2 {
         font-weight: 600;
@@ -40,6 +42,7 @@
         display: inline;
         margin-right: 8px;
     }
+
     p {
         display: inline;
     }

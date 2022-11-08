@@ -18,7 +18,7 @@ const JobPage: NextPage = () => {
   const { loading } = useLoading();
   const { totalList } = useJobsData();
   const currentJob = totalList.find((item) => item.id === id);
-  
+
   const shareIconSrc = "/icons/share.svg";
   const favoriteIconSrc = "/icons/favorite.svg";
 
@@ -123,7 +123,7 @@ const JobPage: NextPage = () => {
                 <div className={styles.images_container}>
                   {currentJob.pictures.map((item, index) => (
                     <div key={index} className={styles.images_container_item}>
-                      <Image src={item} alt="" width={220} height={150} />
+                      <Image src={item} alt="" fill />
                     </div>
                   ))}
                 </div>
@@ -131,13 +131,16 @@ const JobPage: NextPage = () => {
 
               <ReturnButton className={styles.return_button} />
             </div>
-            <Map
-              address={currentJob.address}
-              location={currentJob.location}
-              phone={currentJob.phone}
-              email={currentJob.email}
-              name={currentJob.name}
-            />
+            <div className={styles.right_side}>
+              <h2 className={styles.right_side_title}>Contacts</h2>
+              <Map
+                address={currentJob.address}
+                location={currentJob.location}
+                phone={currentJob.phone}
+                email={currentJob.email}
+                name={currentJob.name}
+              />
+            </div>
           </>
         ) : (
           <h1>Something went wrong</h1>
