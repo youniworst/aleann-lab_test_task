@@ -30,12 +30,14 @@ export const Job: FC<JobProps> = ({
   return (
     <div className={containerStyle}>
       <div className={styles.img}>
-        <Image src={pictureSrc} alt={""} width={85} height={85} />
+        <Image src={pictureSrc} alt={""} fill/>
       </div>
 
       <div className={styles.text_block}>
-        <h2  className={styles.title}>
-          <span className={styles.title_text} onClick={titleClickHandler}>{title}</span>
+        <h2 className={styles.title}>
+          <span className={styles.title_text} onClick={titleClickHandler}>
+            {title}
+          </span>
         </h2>
         <p className={styles.address}>{address}</p>
         <div className={styles.location}>
@@ -51,7 +53,7 @@ export const Job: FC<JobProps> = ({
           .fill(0)
           .map((item, index) => (
             <div key={index} className={styles.rate_star}>
-              <Image src={starIconSrc} alt={""} width={19} height={18} />
+              <Image src={starIconSrc} alt={""} fill />
             </div>
           ))}
       </div>

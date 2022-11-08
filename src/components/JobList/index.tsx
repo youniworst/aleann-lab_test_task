@@ -15,7 +15,7 @@ export const JobList: FC<JobListProps> = ({ className }) => {
   const [pageCount, setPageCount] = useState<number>(0);
   const [itemOffset, setItemOffset] = useState<number>(0);
 
-  const {totalList} = useJobsData()
+  const { totalList } = useJobsData();
 
   useEffect(() => {
     const endOffset = itemOffset + itemsPerPage;
@@ -30,6 +30,7 @@ export const JobList: FC<JobListProps> = ({ className }) => {
       `User requested page number ${event.selected}, which is offset ${newOffset}`
     );
     setItemOffset(newOffset);
+    window.scrollTo(0, 0);
   };
 
   const prevArrrowIcon = "/icons/left_arrow.svg";
